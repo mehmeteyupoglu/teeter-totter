@@ -27,10 +27,8 @@ const LeftSide = () => {
     })
 
     useInterval(() => {
-
         moveDown(top + 1)
-
-    }, 1000)
+    }, 500)
 
     const mystyle = {
         position: "absolute", 
@@ -42,27 +40,27 @@ const LeftSide = () => {
         color: "transparent", backgroundColor: "transparent",  borderColor: "transparent", cursor: "default"
     }
     
-    const move = ({ keyCode }) => {
-        console.log(keyCode)
+    // const move = ({ keyCode }) => {
+    //     console.log(keyCode)
         
-          if (keyCode === 37) {
-              //left arrow
-            moveRight(left + 10);
-          } else if (keyCode === 39) {
-              //right arrow
-            moveRight(left - 10);
-          } else if (keyCode === 40) {
-              //down arrow
-            moveRight(top + 10);
-          } else if (keyCode === 38) {
-              //up arrow
-            moveRight(top - 10);
-          }
+    //       if (keyCode === 37) {
+    //           //left arrow
+    //         moveRight(left + 10);
+    //       } else if (keyCode === 39) {
+    //           //right arrow
+    //         moveRight(left - 10);
+    //       } else if (keyCode === 40) {
+    //           //down arrow
+    //         moveRight(top + 10);
+    //       } else if (keyCode === 38) {
+    //           //up arrow
+    //         moveRight(top - 10);
+    //       }
         
-      };
+    //   };
     
     return (
-        <div>
+        <div  >
             <div className="left-box">
                     <div className="score-board">
                         <h2>Total Weight: {weight} </h2>
@@ -73,8 +71,12 @@ const LeftSide = () => {
                             {randomWeight} kg
                         </div>
                     </div>
-                    <button style={invisibleButtons} onKeyDown={e => move(e)}></button>
                     
+                    <button onClick={() => moveRight(left - 10)}>left</button>
+                    <button onClick={() => moveRight(left + 10)}>right</button>
+                    <button onClick={() => moveDown(top + 10)}>down</button>
+                    <button onClick={() => moveDown(top - 10)}>up</button>
+
                 </div>
         </div>
     );
