@@ -1,20 +1,16 @@
 import * as Actions from "./types"
 
-export const moveRight = () => {
+export const moveRight = (amount) => {
     return {
-        type: Actions.MOVE_RIGHT
+        type: Actions.MOVE_RIGHT, 
+        payload: amount
     }
 }
 
-export const moveLeft = () => {
+export const moveLeft = (amount) => {
     return {
-        type: Actions.MOVE_LEFT
-    }
-}
-
-export const drop = () => {
-    return {
-        type: Actions.DROP
+        type: Actions.MOVE_LEFT, 
+        payload: amount
     }
 }
 
