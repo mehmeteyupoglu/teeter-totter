@@ -17,3 +17,17 @@ export const drop = () => {
         type: Actions.DROP
     }
 }
+
+export const addToRight = (weight) => {
+    return {
+        type: Actions.ADD_TO_RIGHT, 
+        payload: weight
+    }
+}
+
+export const addToLeft = (weight) => {
+    return {
+        type: Actions.ADD_TO_LEFT, 
+        payload: weight
+    }
+}

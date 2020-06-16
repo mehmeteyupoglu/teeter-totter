@@ -23,6 +23,14 @@ const appReducer = (state=initialState, action) => {
             return {
                 ...state, position: action.payload
             }
+        case Actions.ADD_TO_RIGHT: 
+            return {
+                ...state, rightTotalWeight: action.payload
+            }
+        case Actions.ADD_TO_LEFT: 
+            return {
+                ...state, leftTotalWeight: action.payload
+            }
         default: 
             return state
     }
