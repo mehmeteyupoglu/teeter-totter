@@ -1,9 +1,12 @@
 import React from 'react';
+import {StyledTT} from "./styles"
 
 const TeeterTotter = () => {
     return (
         <div>
-            <h1>TeeterTotter</h1>
+            <StyledTT>
+                <hr/>
+            </StyledTT>
         </div>
     );
 }

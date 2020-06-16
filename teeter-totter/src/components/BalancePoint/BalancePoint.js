@@ -1,9 +1,12 @@
 import React from 'react';
+import {StyledTriangle} from "./styles"
 
 const BalancePoint = () => {
     return (
         <div>
-            <div class="triangle-up"></div>
+            <StyledTriangle>
+                <div className="triangle-up"></div>
+            </StyledTriangle>   
         </div>
     );
 }
