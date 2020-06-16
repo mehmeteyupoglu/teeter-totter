@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import { useSelector, useDispatch} from "react-redux"
-import { addToLeft, addToRight } from "../../../state/TT_Store/actions"
-
+import { addToRight } from "../../../state/TT_Store/actions"
 
 const options = ["triangle", "rectangle", "circle"]
 
@@ -23,7 +22,7 @@ const RightSide = () => {
     useEffect(() => {
         dispatch(addToRight(randomWeight))
     })
-    
+
     return (
         
         <div className="right-box">
@@ -32,13 +31,19 @@ const RightSide = () => {
                 <h2>Momentum: {momentum}</h2>
             </div>
             <div className="boxes">
-                <div className={randomBox} >
+                <div className={randomBox} style={mystyle} >
                     {randomWeight} kg
                 </div>
             </div>
         </div>
     );
 }
+
+const mystyle = {
+    position: "absolute", 
+    top: 363, 
+    right: 100,  
+  };
 
 export default RightSide;
 

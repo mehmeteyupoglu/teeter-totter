@@ -31,7 +31,7 @@ const LeftSide = () => {
                         <h2>Momentum: {momentum} </h2>
                     </div>
                     <div className="boxes">
-                        <div className={randomBox} >
+                        <div className={randomBox} style={mystyle} >
                             {randomWeight} kg
                         </div>
                     </div>
@@ -39,5 +39,11 @@ const LeftSide = () => {
         </div>
     );
 }
+
+const mystyle = {
+    position: "absolute", 
+    top: 150, 
+    left: 0, 
+  };
 
 export default LeftSide;

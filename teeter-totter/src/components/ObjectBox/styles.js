@@ -17,9 +17,12 @@ align-items: center;
         flex-direction: column; 
         height: 200px; 
         width: 200px; 
+        position: relative; 
+        
     
         .boxes {
             display: flex;
+
             .triangle {
                 width: 0;
                 height: 0;
@@ -62,6 +65,7 @@ align-items: center;
     align-items: center; 
     height: 200px; 
     width: 200px; 
+    position: relative; 
 
     .boxes {
         .triangle {
