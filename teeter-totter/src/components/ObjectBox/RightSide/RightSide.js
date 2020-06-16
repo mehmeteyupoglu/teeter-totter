@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useSelector, useDispatch} from "react-redux"
+import { addToLeft, addToRight } from "../../../state/TT_Store/actions"
+
 
 const options = ["triangle", "rectangle", "circle"]
 
@@ -16,15 +18,21 @@ const RightSide = () => {
 
     const weight = useSelector(state => state.appReducer.rightTotalWeight)
     const momentum = useSelector(state => state.appReducer.rightMomentum)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(addToRight(randomWeight))
+    })
     
     return (
+        
         <div className="right-box">
             <div className="score-board">
                 <h2>Total Weight: {weight}</h2>
                 <h2>Momentum: {momentum}</h2>
             </div>
             <div className="boxes">
-                <div className={randomBox}>
+                <div className={randomBox} >
                     {randomWeight} kg
                 </div>
             </div>
