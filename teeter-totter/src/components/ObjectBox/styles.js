@@ -9,46 +9,52 @@ align-items: center;
     display: flex; 
     justify-content: space-between; 
     align-items: center;  
-    width: 800px; 
-    height: 310px; 
-    
+    width: 900px; 
+    height: 610px; 
 }
 
 .left-box {
     display: flex; 
+    flex-direction: column; 
     height: 200px; 
     width: 200px; 
+
+    .boxes {
+        display: flex;
+        .triangle-up {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 50px solid blue;
+            display: flex; 
+            justify-content: center; 
+            align-items: flex-start; 
+            margin-right: 5px; 
+        }
+        .circle {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%; 
+            background-color: red;
+            margin-right: 5px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        
+        .rectangle {
+            height: 50px;
+            width: 100px;
+            background-color: yellow;
+            margin-right: 5px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        }
+    }
     
-    .triangle-up {
-        width: 0;
-        height: 0;
-        border-left: 25px solid transparent;
-        border-right: 25px solid transparent;
-        border-bottom: 50px solid blue;
-        display: flex; 
-        justify-content: center; 
-        align-items: flex-start; 
-        margin-right: 5px; 
-    }
-    .square {
-        height: 50px;
-        width: 50px;
-        background-color: red;
-        margin-right: 5px; 
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-    }
     
-    .rectangle {
-        height: 50px;
-        width: 100px;
-        background-color: yellow;
-        margin-right: 5px; 
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-    }
 }
 
 `

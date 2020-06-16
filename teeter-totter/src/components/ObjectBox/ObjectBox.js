@@ -1,23 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyledObjects } from "./styles"
+import LeftSide from "./LeftSide"
+import RightSide from "./RightSide"
 
-const ObjectBox = () => {
-    return (
-        <div>
-            <StyledObjects>
-            <div className="main-box">
-                <div className="left-box">
-                    <div className="triangle-up">3kg</div>
-                    <div className="square">5kg</div>
-                    <div className="rectangle">7kg</div>
-                </div>
-                <div className="right-box">Right Box</div>
+class ObjectBox extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             
+        }
+    }
+    
+    render() {
+        return (
+            <div>
+                <StyledObjects>
+                    <div className="main-box">
+                        <LeftSide />
+                        <RightSide />
+                    </div>
+                </StyledObjects>
             </div>
-                
-                
-            </StyledObjects>
-        </div>
-    );
+        );
+    }
 }
 
 export default ObjectBox;
+
